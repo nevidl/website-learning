@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Latihan Soal - Software As A Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="welcome.php" class="logo">
+                          Cloud Computing
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li><a href="welcome.php">Home</a></li>
+                        <li><a href="materi.html">Materi</a></li>
+                        <li><a href="soal.html">Latihan Soal</a></li>
+                        <li><a href="new.html" class="active">Praktek</a></li> 
+                        <li><a href="new.html">Praktek</a></li> 
+                        <li><a href="logout.php">Log Out</a></li> 
+                      </ul>    
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="meeting-single-item">
+                <div class="thumb">
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <div class="soal">
+                        <h5>Soal Praktek</h5>
+                        <p>Seorang penilai meminta untuk dibuatkan tampilan sederhana dibrowser dengan menggunakan HTML.<br>
+                            Adapun ketentuannya adalah sebagai berikut...<br>
+                            1. Judul yang ditampilkan pada jendela browser adalah My Diary <br>
+                            2. Tulisan pada bagian body bebas, asalkan memuat kata "berlibur". Tulisan berwarna hitam <br>
+                            3. Warna pada latar belakang adalah putih<br>
+                        Kerjakan dengan bantuan online compailer dengan klik button dibawah ini</p>
+                      </div>
+                    </div>
+                   
+                    <button onclick="window.location.href='https://onecompiler.com/html'">Akses Compiler HTML</button>
+                   
+                  <!--Pembatas-->
+                    <div class="col-lg-12">
+                      <div class="share">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="col-lg-12">
+              <div class="main-button-red">
+                <a href="soal.html">Kembali</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© Nevi Dila Restu Anggraeni PTI 19 A 2022 
+          <br>Website Pembelajaran Mata Pelajaran Cloud Computing </p>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+  </body>
+
+</html>
+
+    <button onclick="window.location.href='https://onecompiler.com/html'">Akses Compiler HTML</button>
+    <a href="https://onecompiler.com/html" target="_blank">Akses Compiler HTML</a>
